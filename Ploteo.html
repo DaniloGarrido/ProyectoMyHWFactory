@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width-device-with,initial-scale=1.0">
+        <title> Ploteo </title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
+        <link rel="icon" href="img/gatico.png" >
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/estilos.css">
+        <script src="js/metodoss.js"></script>
+       
+        
+<style>
+  .error-control {
+        border: 1px solid red;
+    }
+
+    label.error {
+        color: red;
+        width: 300px;
+        font-size: 0.8em;
+        margin-top: -5px;
+        margin-bottom: 10px;
+    }
+</style>       
+      
+ 
+
+<script>
+
+  
+  $(function() 
+  {
+  
+      $("#formulario-ploteo").validate({
+      rules:{
+        inputNom:"required",
+        email:{
+          required:true,
+          email:true
+        },
+        inputTel:"required",
+        modelo:"required",
+        inputMod:"required",
+        inputDeta:"required",
+        inputLink:"required",
+
+
+      },
+      messages:{
+        inputNom:{required:'Ingrese su nombre',
+                  minlength:'Ingrese un Nombre'},
+        email:{required:'Ingrese su correo electronico',
+                  email:'Ingrese un correo valido'},
+        inputTel:{required:'Ingrese su telefono',
+                  minlength:'Ingrese un telefono valido'},
+        modelo:{required:'Seleccione un tipo de producto',
+                  minlength:'Seleccione un tipo de producto'},
+        inputMod:{required:'Ingrese el modelo del producto',
+                  minlength:'Ingrese un modelo de producto'},
+        inputDeta:{required:'Ingrese los detalles que desea implementar',
+                  minlength:'Ingrese detalle'},
+        inputLink:{required:'Ingrese su imagen',
+                  minlength:'Ingrese una imagen'},
+      }
+    });
+  });
+</script>
+
+    </head>
+    
+    <body class="" >
+    
+        <div class="container-fluid" >
+            <div  class="row ">
+               
+                <div class=" fixed-top container-fluid divnavligth" id="divnav">
+                   
+                  <nav  class="col-12 navbar navbar-expand-md " >
+                    <a class="navbar-brand fontnav">  <img src="img/gatico.png" alt="Logo" style="width: 30px;"></a>
+                    <a  class="navbar-brand fontnav " href="#">My HW Factory</a>
+                    
+                    
+                    
+               
+
+             
+                    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                      <ul class="navbar-nav">
+                        <li class="nav-item">
+                          <a class="nav-link fontnav" href="Bienvenida.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link fontnav" href="Productos.html">Produtos</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link fontnav" href="Cuenta.html">Ingresar</a>
+                        </li>    
+                      </ul>
+                   
+                      
+                    </div>  
+
+
+                    <div>
+                    <label type="button" class="btnligthmode " id="btndarkmode"  >
+                     <i class="fas fa-adjust btniconcolor"></i>                      
+                    </label>
+                    
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                      <span class="navbar-toggler-icon"><i class="fas fa-bars fa-lg fontnav" style="margin-top: 5px;" ></i></span>
+                    </button>
+
+                  
+                    </div>
+                    
+                  </nav>
+                </div>
+            </div>
+           <!---->
+              
+                
+            <div class="row col-12" style="padding: 15px;margin-top: 60px; " >
+               <section class="container-fluid col-10">
+                 <form id="formulario-ploteo" action="#" style="display: flex;flex-direction: column;text-align: center;"class="container-fluid" >
+
+                  <label>Ingrese su nombre completo</label>
+                  <input name="inputNom" type="text" required minlength="6">
+                  <label>Ingrese su correo</label>
+                  <input name="inputCorr" type="text" required placeholder="nombre@dominio.cl">
+                  <label>Ingrese su teléfono</label>
+                  <input name="inputTel" type="number" required minlength="9">
+                  <label>Ingrese producto</label>
+                  <select name="modelo" id="modelo" required>
+                    <option value="gabinete">Gabinete</option>
+                    <option value="monitor">Monitor</option>
+                    <option value="audifonos">Audifonos</option>
+                    <option value="mouse">Mouse</option>
+                    <option value="gpu">Gpu</option>
+                    <option value="teclado">Teclado</option>
+                  </select>
+                  <label>Ingrese modelo del producto</label>
+                  <input name="inputMod" type="text" required>
+                  <label>Indique el area que desee implementar la imágen o detalle</label>
+                  <input name="inputDeta" type="text" required>
+                  <label>Convierta su imagen en un link e ingreselo aquí</label>
+                  <input name="inputLink" type="text" required>
+                  <button  id="btnenviar"> Enviar </button>
+
+                  
+                 </form>
+               </section>
+                
+              
+                        
+            
+     
+            </div>
+        </div>    
+       
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>  
+
+        <script src="js/metodos_ventana_compra.js"></script>
+        
+      </body>
+      <footer style="text-align: center"; >
+        <p>&copy; Todos los derechos reservados. 2020 </p>
+    </footer>
+    </html>
+	

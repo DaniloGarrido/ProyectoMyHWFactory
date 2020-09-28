@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Ejemplos JS
+        </title>
+        <meta charset="utf-8">
+        <script src="js/metodos.js"></script>
+        <script>
+             function Datos()
+            {
+                var edad =document.getElementById('edad').value;
+                var nom = document.getElementById('nom').value;
+                alert('Nombre: '+nom+' Edad: '+edad);
+            }
+        </script>
+          
+        <script>
+  function Multiplicax10()
+            {
+             var num =document.getElementById('num').value;
+             var multi=parseInt(num)*10;
+             alert('El resultado de la multiplicacion es: '+multi);
+             document.getElementById("num").value = "";
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Ejemplos de JavaScript y Jquery</h1> <br> 
+        <h2>1. Llama a una función y muestra valores de variables</h2>
+        <!--invocamos en el boton a un metodo creado en un archivo externo, llamado "ver"-->
+        <input type="button" id="boton1" name="ver" value="Haz Click" onclick="ver()">
+        <hr>
+        <h2>2. Llama a una función e ingresa datos</h2>
+        <input type="button" id="boton2" name="ingresa" value="Ingresa datos" onclick="Ingresar()">
+        <hr>
+        <h2>3. Llama a una función y suma dos numeros</h2>
+        <input type="button" id="boton3" name="suma" value="Sumar dos numeros" onclick="Sumita()">
+
+        <hr>
+        <h2>4. Practicando, haciendo cálculos</h2>
+        <input type="button" id="boton0" name="calculos" value="Calculando Operaciones" onclick="Calculos()"> 
+
+        <h2>5. Llama a una función y verifica si es o no mayor de edad</h2>
+        <input type="button" id="boton4" name="mayormenor" value="¿Mayor de edad?" onclick="MayorEdad()">
+        <hr>
+
+        <h2>6. Operadores lógicos (&& - || - !)</h2>
+  <input type="button" id="boton5" name="verifica" value="Verifica Numero" onclick="Verifica()">
+  <hr>
+  
+  <h2>7. Sumar 10 números - Ciclos (while - for) </h2>
+        <input type="button" id="boton6" name="sumar" value="Sumar 10 números" onclick="Ciclos()">
+        <hr>
+
+        <h2>9. Formularios </h2>
+  <form method="post">
+    <label for="nombre">Ingrese Nombre</label>
+    <input type="text" name="nomb" id="nom"><br>
+    <label for="eda">Ingrese Edad </label>
+    <input type="text" name="ed" id="edad"><br><br>
+    <input type="button" id="boton7" name="datos" value="Nombre y Edad" onclick="Datos()">
+   </form>
+   <hr>
+   <form method="post">
+    <label for="numero">Ingrese un numero</label>
+    <input type="text" name="numero" id="num"><br>
+    <input type="button" id="boton8" name="btn8" value="Multiplica x 10" onclick="Multiplicax10()">
+
+
+
+</form>
+    </body>
+</html>
